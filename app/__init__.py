@@ -1,3 +1,4 @@
+__VERSION__ = "0.0.3"
 
 from flask import Flask, render_template
 

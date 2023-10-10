@@ -19,7 +19,7 @@ def login():
   if form.validate_on_submit():
     login_user(form.user)
     flash(
-      f"Logged in as Team {User.query.filter_by(username=self.username.data).first().team_number}",
+      f"Logged in as Team {User.query.filter_by(username=form.username.data).first().team_number}",
       "success"
     )
     return redirect(request.args.get('next') or url_for('index'))
